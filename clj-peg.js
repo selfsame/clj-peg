@@ -62,9 +62,6 @@ Symbol
 
 Char = "\\" char:[^ \t\n\r] _ {return token("char", char)}
 
-NonLeading  = [0-9\#\%\'\:]
-
-Character = [^\(\)\[\]\{\}\;\^\~\`\'\"\@\ \n\r\t\:\/\#\\]
 
 
 Number = Ratio / Float / Integer
@@ -77,3 +74,8 @@ Integer = first:[0-9]rest:[0-9]* _ { return token("int", parseInt(text(), 10)); 
 __ "whitespace" = [ \t\n\r]+ {return null;}
 
 _ "whitespace" = [ \t\n\r]* {return null;}
+
+
+NonLeading  = [0-9\#\%\'\:]
+
+Character = [^\(\)\[\]\{\}\;\^\~\`\'\"\@\ \n\r\t\:\/\#\\]
