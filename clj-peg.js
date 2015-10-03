@@ -64,7 +64,7 @@ Char = "\\" char:[^ \t\n\r] _ {return token("char", char)}
 
 NonLeading  = [0-9\#\%\'\:]
 
-Character = [^\(\)\[\]\{\}\;\^\~\`\'\"@\ \n\r\t\:\/\#\\]
+Character = [^\(\)\[\]\{\}\;\^\~\`\'\"\@\ \n\r\t\:\/\#\\]
 
 
 Number = Ratio / Float / Integer
